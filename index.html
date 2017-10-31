@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Dashboard</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">Food Info</a>
+	    </div>
+	</nav>
+
+	<main>
+	  <section class="section">
+	    <div class="container">
+	      
+	      <div class="row">
+	        <div class="col-xs-12 col-sm-6">
+	          <h1 class="section-heading">The Nutritional Content Of Food</h1>
+	          <br>
+	          <p class="section-paragraph">
+						    The following data comes from the United States Department of 
+						    Agriculture's Food Composition Database. It contains data for 
+						    various types of food including the amounts of different vitamins 
+						    and minerals found in the foods as well as macronutrient percentages. 
+						    The food covered spans a large variety of foods from butter to 
+						    Campbell's soup. Much of the supplementary documenation for each 
+						    field comes directly from that pages' Wikipedia article.
+						</p>
+	        </div>
+	      </div>
+
+	      <div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/1200px-Good_Food_Display_-_NCI_Visuals_Online.jpg">
+					</div>
+	      </div>
+	    </div>
+	  </section>
+
+    <div class="col-xs-12 col-sm-6 col-lg-6">
+    	<i class="fa fa-female fa-gender" aria-hidden="true"></i> <span class="number-box" id="percent-of-women-professors"></span>
+    	<i class="fa fa-male fa-gender" aria-hidden="true"></i> <span class="number-box" id="percent-of-men-professors"></span>
+    </div>  
+
+	  <section class="section">
+	    <div class="container">
+	      
+	      <div class="row">
+	        <div class="col-xs-12 col-sm-4 text-center">
+	          <p class="section-paragraph">Men outnumber women 10 to 1</p>
+	          </div>
+	          <div class="col-xs-12 col-sm-4 text-center">
+	            <p class="section-paragraph">Men earn on average about 15% more</p>
+	          </div>
+	          <div class="col-xs-12 col-sm-4 text-center">
+							<p class="section-paragraph">Distribution of ranks is weighted towards the upper level for men.</p>	          
+						</div>
+	        </div>
+
+	        <div class="row">
+	          <div class="col-xs-12 col-sm-4 text-center" id="gender-balance" class="custom-chart"></div>
+	          <div class="col-xs-12 col-sm-4 text-center" id="average-salary" class="custom-chart"></div>
+	          <div class="col-xs-12 col-sm-4 text-center" id="rank-distribution" class="custom-chart"></div>
+	        </div>
+	      </div>
+	    </section>
+
+	    <section class="section">
+	      <div class="container">
+	        
+	        <div class="row">
+	          <div class="col-xs-12 col-sm-12 text-center">
+	            <p class="section-paragraph">There appears to be little or no correlation between salary and years of service.</p>
+	        </div>
+
+	        <div class="col-xs-12 col-sm-12 text-center" id="service-salary">
+	        	
+	        </div>
+	      </div>
+	    </div>
+	  </section>
+
+	  <section class="section">
+	    <div class="container">
+
+	      <div class="row">
+	        <div class="col-xs-12 col-sm-12 text-center">
+	          <p class="section-paragraph">There is a very loose correlation between salary and years since receiving a PhD.</p>
+	        </div>
+
+	        <div class="col-xs-12 col-sm-12 text-center" id="phd-salary"></div>
+	      </div>
+
+	    </div>
+	  </section>
+	</main>
+    <script type="text/javascript" src="js/graphs.js"></script>
+</body>
+</html>
