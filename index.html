@@ -16,6 +16,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -58,30 +59,33 @@
                 <li class="active"><a data-toggle="tab" href="#industry">Industry</a></li>
                 <li><a data-toggle="tab" href="#citizenship">Citizenship</a></li>
                 <li><a data-toggle="tab" href="#gender">Gender</a></li>
-                <li><a data-toggle="tab" href="#inherited">Inherited</a></li>
-                <li><a data-toggle="tab" href="#relationship">Relationship</a></li>
-                <li><a data-toggle="tab" href="#sector">Sector</a></li>
-                <li><a data-toggle="tab" href="#founder">Founder</a></li>
-                <li><a data-toggle="tab" href="#wealth">Wealth Type</a></li>
             </ul>
          
             <div class="tab-content">
                 <div id="industry" class="tab-pane fade in active">
-                    <br><br>
+                    <br>
+                    <p>	The specific industries the billionaires profitted from.</p>
+                    <br>
                     <div class="col-md-12" id="chart1"></div>
                 </div>
                 <div id="citizenship" class="tab-pane fade">
-                    <br><br>
-                    <div class="col-md-5 text-left">
-                    <h3>Citizenship</h3>
+                    <br>
                     <p>The name of the country that this billionaire has citizenship with.</p>
-                    </div>
-                    <div class="col-md-4 col-md-offset-1" id="chart2"></div>
+                    <br>
+                    <div class="col-md-12" id="chart2"></div>
+                </div>
+                <div id="gender" class="tab-pane fade">
+                    <br>
+                    <p>The name of the country that this billionaire has citizenship with.</p>
+                    <br>
+                    <div class="col-md-12" id="chart3"></div>
                 </div>
             </div>
         </div>
     </section>
 	</main>
     <script type="text/javascript" src="js/graphs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
 </body>
 </html>
