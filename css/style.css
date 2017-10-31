@@ -1,3 +1,57 @@
 img {
-    width: 50%;
+    width: 60%;
+}
+
+.image {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.horizontal-line {
+    border: none;
+    height: 1px;
+    color: grey; 
+    background-color: grey;
+    width: 500px;
+    margin-top: 80px;
+}
+
+.horizontal-line1 {
+    border: none;
+    height: 1px;
+    color: grey; 
+    background-color: grey;
+    width: 400px;
+}
+
+.row-container {
+    margin: 20px;
+    padding: 20px;
+}
+
+.row-color {
+    background-color: #efefef;
+    text-align: center;
+}
+
+.row-spacing {
+    padding: 15px 10px;
+}
+
+.fa {
+    font-size: 50px;
+}
+
+.tab-spacing {
+    margin-bottom: 100px;
+}
+
+.nav-tabs > li {
+    float:none;
+    display:inline-block;
+    zoom: 1;
+}
+
+.nav-tabs {
+    text-align:center;
 }
