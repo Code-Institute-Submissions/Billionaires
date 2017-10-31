@@ -21,7 +21,7 @@
 	<nav class="navbar navbar-inverse">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
-	      <a class="navbar-brand" href="#">Food Info</a>
+	      <a class="navbar-brand" href="#">Billionaires</a>
 	    </div>
 	</nav>
 
@@ -30,219 +30,53 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
-                    <h1 class="section-heading">The Nutritional Content Of Food</h1>
-                    <br>
-                    <p class="section-paragraph">
-        			    The following data comes from the United States Department of 
-        			    Agriculture's Food Composition Database. It contains data for 
-        			    various types of food including the amounts of different vitamins 
-        			    and minerals found in the foods as well as macronutrient percentages. 
-        			    The food covered spans a large variety of foods from butter to 
-        			    Campbell's soup. Much of the supplementary documenation for each 
-        			    field comes directly from that pages' Wikipedia article.
+                    <h1 class="section-heading">Data Visualization Of The Worlds Billionaires</h1>
+                    <br><br>
+                    <p class="section-paragraph">This project stems from researchers who have compiled a multi-decade database of the super-rich.</p> 
+        			<p class="section-paragraph">Building off the Forbes World's Billionaires lists from 1996-2014, 
+        			    scholars at Peterson Institute for International Economics have added 
+        			    a couple dozen more variables about each billionaire - including whether 
+        			    they were self-made or inherited their wealth.</p>
+        			<p class="section-paragraph">Roughly half of European 
+        			    billionaires and one-third of U.S. billionaires got a significant financial 
+        			    boost from family, the authors estimate.
 		            </p>
                 </div>
 	            <div class="col-xs-12 col-sm-6 image">
-				    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/1200px-Good_Food_Display_-_NCI_Visuals_Online.jpg">
+				    <img src="http://everydaytalks.com/wp-content/uploads/2015/01/largest-private-jets.png">
 			    </div>
 	        </div>
 	    </div>
 	</section>
-	
-	<section>
-        <div class="row row-color row-container">
-            <div class="col-sm-3 row-spacing">
-                <h4>Vitamins</h4>   
-                <i class="fa fa-check-circle big-icon" aria-hidden="true"></i>
-            </div> 
-            <div class="col-sm-3 row-spacing">
-                <h4>Macronutrients</h4>    
-                <i class="fa fa-check-circle" aria-hidden="true"></i>
-            </div>
-            <div class="col-sm-3 row-spacing">
-                <h4>Micronutrients</h4>    
-                <i class="fa fa-check-circle" aria-hidden="true"></i>
-            </div>
-            <div class="col-sm-3 row-spacing">
-                <h4>Calories & Sugars</h4>    
-                <i class="fa fa-check-circle" aria-hidden="true"></i>
-            </div>
-        </div>
-    </section>
+	<br><br><br>
 	<section class="tab-spacing">
-        <div class="container text-center">
-            <h2>Vitamins</h2>
-            <p>Please select the vitamin you would like to see information on.</p>
+        <div class="container text-left">
+            <h2>Graphs</h2>
+            <p>By clicking on one of the description below, you will be able to see information according to the field you have chosen.</p>
             <br>
-            <ul class="nav nav-tabs text-center">
-                <li class="active"><a data-toggle="tab" href="#home">Vitamin A</a></li>
-                <li><a data-toggle="tab" href="#alpha">Alpha Carotene</a></li>
-                <li><a data-toggle="tab" href="#beta">Beta Carotene</a></li>
-                <li><a data-toggle="tab" href="#cryp">Beta Cryptoxanthin</a></li>
-                <li><a data-toggle="tab" href="#choline">Choline</a></li>
-                <li><a data-toggle="tab" href="#b12">Vitamin B12</a></li>
-                <li><a data-toggle="tab" href="#thiamin">Thiamin</a></li>
-                <li><a data-toggle="tab" href="#riboflavin">Riboflavin</a></li>
-                <li><a data-toggle="tab" href="#niacin">Niacin</a></li>
-                <li><a data-toggle="tab" href="#aicd">Panthothetic Acid</a></li>
-                <li><a data-toggle="tab" href="#b6">Vitamin B6</a></li>
-                <li><a data-toggle="tab" href="#c">Vitamin C</a></li>
-                <li><a data-toggle="tab" href="#e">Vitamin E</a></li>
-                <li><a data-toggle="tab" href="#k">Vitamin K</a></li>
+            <ul class="nav nav-tabs text-left">
+                <li class="active"><a data-toggle="tab" href="#industry">Industry</a></li>
+                <li><a data-toggle="tab" href="#citizenship">Citizenship</a></li>
+                <li><a data-toggle="tab" href="#gender">Gender</a></li>
+                <li><a data-toggle="tab" href="#inherited">Inherited</a></li>
+                <li><a data-toggle="tab" href="#relationship">Relationship</a></li>
+                <li><a data-toggle="tab" href="#sector">Sector</a></li>
+                <li><a data-toggle="tab" href="#founder">Founder</a></li>
+                <li><a data-toggle="tab" href="#wealth">Wealth Type</a></li>
             </ul>
          
             <div class="tab-content">
-                <div id="home" class="tab-pane fade in active">
+                <div id="industry" class="tab-pane fade in active">
                     <br><br>
-                    <div class="col-md-5 text-left">
-                    <h3>Research</h3>
-                    <p>Before we start to build your website, we firstly try and understand your business and its target market. 
-                       Once we know how the business operates and who its customers are, we can then start setting some goals on
-                       what we actually want the website to do.</p>
-                    </div>
-                    <div class="col-md-4 col-md-offset-1">
-                        <img src="http://www.independent.ie/incoming/article29900304.ece/ALTERNATES/h342/stock%20pen%20paper%20app.jpg" class="logo img-responsive">
-                    </div>
+                    <div class="col-md-12" id="chart1"></div>
                 </div>
-                <div id="menu1" class="tab-pane fade">
+                <div id="citizenship" class="tab-pane fade">
                     <br><br>
                     <div class="col-md-5 text-left">
-                    <h3>Prototyping</h3>
-                    <p>Once our goals are set, we can then start planning the web development and design process. 
-                       We do this by setting up a prototype using one of various wireframing programs so that you 
-                       can see the basic page structure, color schemes and graphics.</p>
+                    <h3>Citizenship</h3>
+                    <p>The name of the country that this billionaire has citizenship with.</p>
                     </div>
-                    <div class="col-md-4 col-md-offset-1">
-                        <img src="https://17404-presscdn-0-71-pagely.netdna-ssl.com/studio/wp-content/uploads/2014/04/UXPin-.png" class="logo img-responsive">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="tab-spacing">
-        <div class="container text-center">
-            <h2>Macronutrients</h2>
-            <p>Please select the macronutrient you would like to see information on.</p>
-            <br>
-            <ul class="nav nav-tabs text-center">
-                <li class="active"><a data-toggle="tab" href="#mono">Monosaturated Fat</a></li>
-                <li><a data-toggle="tab" href="#poly">Polysaturated Fat</a></li>
-                <li><a data-toggle="tab" href="#saturated">Saturated Fat</a></li>
-                <li><a data-toggle="tab" href="#protein">Protein</a></li>
-                <li><a data-toggle="tab" href="#carbs">Carbohydrates</a></li>
-                <li><a data-toggle="tab" href="#fiber">Fiber</a></li>
-                <li><a data-toggle="tab" href="#cholesterol">Cholesterol</a></li>
-            </ul>
-         
-            <div class="tab-content">
-                <div id="home" class="tab-pane fade in active">
-                    <br><br>
-                    <div class="col-md-5 text-left">
-                    <h3>Research</h3>
-                    <p>Before we start to build your website, we firstly try and understand your business and its target market. 
-                       Once we know how the business operates and who its customers are, we can then start setting some goals on
-                       what we actually want the website to do.</p>
-                    </div>
-                    <div class="col-md-4 col-md-offset-1">
-                        <img src="http://www.independent.ie/incoming/article29900304.ece/ALTERNATES/h342/stock%20pen%20paper%20app.jpg" class="logo img-responsive">
-                    </div>
-                </div>
-                <div id="menu1" class="tab-pane fade">
-                    <br><br>
-                    <div class="col-md-5 text-left">
-                    <h3>Prototyping</h3>
-                    <p>Once our goals are set, we can then start planning the web development and design process. 
-                       We do this by setting up a prototype using one of various wireframing programs so that you 
-                       can see the basic page structure, color schemes and graphics.</p>
-                    </div>
-                    <div class="col-md-4 col-md-offset-1">
-                        <img src="https://17404-presscdn-0-71-pagely.netdna-ssl.com/studio/wp-content/uploads/2014/04/UXPin-.png" class="logo img-responsive">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="tab-spacing">
-        <div class="container text-center">
-            <h2>Micronutrients</h2>
-            <p>Please select the micronutrient you would like to see information on.</p>
-            <br>
-            <ul class="nav nav-tabs text-center">
-                <li class="active"><a data-toggle="tab" href="#calcium">Calcium</a></li>
-                <li><a data-toggle="tab" href="#copper">Copper</a></li>
-                <li><a data-toggle="tab" href="#iron">Iron</a></li>
-                <li><a data-toggle="tab" href="#lutein">Lutein & Zeaxanthin</a></li>
-                <li><a data-toggle="tab" href="#lycopene">Lycopene</a></li>
-                <li><a data-toggle="tab" href="#magnesium">Magnesium</a></li>
-                <li><a data-toggle="tab" href="#phosphorus">Phosphorus</a></li>
-                <li><a data-toggle="tab" href="#potassium">Potassium</a></li>
-                <li><a data-toggle="tab" href="#selenium">Selenium</a></li>
-                <li><a data-toggle="tab" href="#sodium">Sodium</a></li>
-                <li><a data-toggle="tab" href="#zinc">Zinc</a></li>
-            </ul>
-         
-            <div class="tab-content">
-                <div id="home" class="tab-pane fade in active">
-                    <br><br>
-                    <div class="col-md-5 text-left">
-                    <h3>Research</h3>
-                    <p>Before we start to build your website, we firstly try and understand your business and its target market. 
-                       Once we know how the business operates and who its customers are, we can then start setting some goals on
-                       what we actually want the website to do.</p>
-                    </div>
-                    <div class="col-md-4 col-md-offset-1">
-                        <img src="http://www.independent.ie/incoming/article29900304.ece/ALTERNATES/h342/stock%20pen%20paper%20app.jpg" class="logo img-responsive">
-                    </div>
-                </div>
-                <div id="menu1" class="tab-pane fade">
-                    <br><br>
-                    <div class="col-md-5 text-left">
-                    <h3>Prototyping</h3>
-                    <p>Once our goals are set, we can then start planning the web development and design process. 
-                       We do this by setting up a prototype using one of various wireframing programs so that you 
-                       can see the basic page structure, color schemes and graphics.</p>
-                    </div>
-                    <div class="col-md-4 col-md-offset-1">
-                        <img src="https://17404-presscdn-0-71-pagely.netdna-ssl.com/studio/wp-content/uploads/2014/04/UXPin-.png" class="logo img-responsive">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="tab-spacing">
-        <div class="container text-center">
-            <h2>Calories & Sugar</h2>
-            <p>Please select which nutrient you would like to see information on.</p>
-            <br>
-            <ul class="nav nav-tabs text-center">
-                <li class="active"><a data-toggle="tab" href="#cals">Kilocalories</a></li>
-                <li><a data-toggle="tab" href="#sugar">Sugar</a></li>
-            </ul>
-         
-            <div class="tab-content">
-                <div id="home" class="tab-pane fade in active">
-                    <br><br>
-                    <div class="col-md-5 text-left">
-                    <h3>Research</h3>
-                    <p>Before we start to build your website, we firstly try and understand your business and its target market. 
-                       Once we know how the business operates and who its customers are, we can then start setting some goals on
-                       what we actually want the website to do.</p>
-                    </div>
-                    <div class="col-md-4 col-md-offset-1">
-                        <img src="http://www.independent.ie/incoming/article29900304.ece/ALTERNATES/h342/stock%20pen%20paper%20app.jpg" class="logo img-responsive">
-                    </div>
-                </div>
-                <div id="menu1" class="tab-pane fade">
-                    <br><br>
-                    <div class="col-md-5 text-left">
-                    <h3>Prototyping</h3>
-                    <p>Once our goals are set, we can then start planning the web development and design process. 
-                       We do this by setting up a prototype using one of various wireframing programs so that you 
-                       can see the basic page structure, color schemes and graphics.</p>
-                    </div>
-                    <div class="col-md-4 col-md-offset-1">
-                        <img src="https://17404-presscdn-0-71-pagely.netdna-ssl.com/studio/wp-content/uploads/2014/04/UXPin-.png" class="logo img-responsive">
-                    </div>
+                    <div class="col-md-4 col-md-offset-1" id="chart2"></div>
                 </div>
             </div>
         </div>

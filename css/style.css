@@ -1,5 +1,5 @@
 img {
-    width: 60%;
+    width: 80%;
 }
 
 .image {
@@ -25,7 +25,7 @@ img {
 }
 
 .row-container {
-    margin: 20px;
+    margin: 100px 20px 100px 20px;
     padding: 20px;
 }
 
@@ -53,5 +53,5 @@ img {
 }
 
 .nav-tabs {
-    text-align:center;
+    text-align:left;
 }
