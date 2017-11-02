@@ -23,39 +23,3 @@ img {
     background-color: grey;
     width: 400px;
 }
-
-.row-container {
-    margin: 100px 20px 100px 20px;
-    padding: 20px;
-}
-
-.row-color {
-    background-color: #efefef;
-    text-align: center;
-}
-
-.row-spacing {
-    padding: 15px 10px;
-}
-
-.fa {
-    font-size: 50px;
-}
-
-.tab-spacing {
-    margin-bottom: 100px;
-}
-
-.nav-tabs > li {
-    float:none;
-    display:inline-block;
-    zoom: 1;
-}
-
-.nav-tabs {
-    text-align:left;
-}
-
-.section {
-    padding-top: 100px;
-}
