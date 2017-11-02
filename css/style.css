@@ -55,3 +55,7 @@ img {
 .nav-tabs {
     text-align:left;
 }
+
+.section {
+    padding-top: 100px;
+}
