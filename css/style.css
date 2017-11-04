@@ -23,3 +23,12 @@ img {
     background-color: grey;
     width: 400px;
 }
+
+.row-color {
+    background-image: url("https://livingwithcommoncents.files.wordpress.com/2009/09/cropped-money-header.jpg");
+    color: white;
+}
+
+.about-button {
+    margin-top: -5px;
+}
