@@ -21,14 +21,24 @@ img {
     height: 1px;
     color: grey; 
     background-color: grey;
-    width: 400px;
+    width: 500px;
 }
 
 .row-color {
-    background-image: url("https://livingwithcommoncents.files.wordpress.com/2009/09/cropped-money-header.jpg");
     color: white;
+    margin-bottom: 50px;
 }
 
 .about-button {
     margin-top: -5px;
+}
+
+.logo {
+    width: 140px;
+    height: 28px;
+    margin-top: -2px;
+}
+
+.main {
+    width: 50%;
 }

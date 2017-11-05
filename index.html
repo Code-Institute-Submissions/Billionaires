@@ -19,7 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-inverse">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
 	        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -27,11 +27,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-	        <a class="navbar-brand" href="#">Billionaires</a>
+	        <a class="navbar-brand" href="#"><img src="img/billionaire.png" class="logo"></a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="readme.md"><button type="button" class="btn btn-primary about-button">About</button></a></li>
+                <li><a href="readme.md"><button type="button" class="btn btn-sm btn-primary about-button">About This Project</button></a></li>
             </ul>
         </div>
 	  </div>
@@ -40,10 +40,10 @@
 	<main>
     <section class="section">
         <div class="container">
-            <div class="row col-md-12 text-center row-color">
-                <h1 class="section-heading">Billionaires</h1>
-                <p class="section-paragraph">This data visualization stems from researchers who have compiled a multi-decade database of the super-rich.</p>
-                <br>
+            <div class="row col-md-12 text-center">
+                <hr class="horizontal-line1">
+                <h3>Data Visualization Of The World's Billionaires</h3>
+                <hr class="horizontal-line1">
             </div>
             <div class="row">
                 <div class="col-md-4" id="citizenship_chart">
@@ -54,10 +54,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6" id="name_chart">
+                <div class="col-md-5" id="name_chart">
                     <p class="text-left"><strong>Name</strong></p>
                 </div>
-                <div class="col-md-6" id="sector_chart">
+                <div class="col-md-7" id="age_worth_sector_chart">
                     <p class="text-right"><strong>Sector</strong></p>
                 </div>
             </div>

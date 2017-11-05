@@ -16,17 +16,6 @@ function makeGraphs(error, billionairesData) {
             .transitionDuration(1000)
             .dimension(citizenship_dim)
             .group(count_by_citizenship);
-            
-        var category_dim = ndx.dimension(dc.pluck('category'));
-        var count_by_category = category_dim.group();
-        dc.rowChart("#category_chart")
-            .height(300)
-            .width(600)
-            .dimension(category_dim)
-            .group(count_by_category)
-            .cap(4)
-            .othersGrouper(false)
-            .xAxis().ticks(4);
        
         var industry_dim = ndx.dimension(dc.pluck('industry'));
         var total_worth = industry_dim.group().reduceSum(dc.pluck('worth'));
@@ -42,26 +31,72 @@ function makeGraphs(error, billionairesData) {
         var name_dim = ndx.dimension(dc.pluck('name'));
         var worth_group = name_dim.group().reduceSum(dc.pluck('worth'));
         dc.rowChart("#name_chart")
-            .width(600)
+            .width(500)
             .height(300)
             .dimension(name_dim)
             .group(worth_group)
             .cap(10)
             .othersGrouper(false)
             .xAxis().ticks(5);
-
-        var sector_dim = ndx.dimension(dc.pluck('sector'));
-        var count_by_sector = sector_dim.group();
-        dc.barChart("#sector_chart")
-            .height(300)
-            .width(600)
-            .dimension(sector_dim)
-            .group(count_by_sector)
-            .margins({top: 20, right: 20, bottom: 20, left: 20})
-            .transitionDuration(500)
-            .x(d3.scale.ordinal())
-            .xUnits(dc.units.ordinal)
-            .yAxis().ticks(4);
             
+        var sectorDim = ndx.dimension(function(d){
+            return d.sector;
+        });
+        var statsBySector = sectorDim.group().reduce(
+            function (p, v) {
+                p.age += +v["age"];
+                p.worth += +v["worth"];
+                return p;
+            },
+            function (p, v) {
+                p.age -= +v["age"];
+                p.worth -= +v["worth"];
+                return p;
+            },
+            function () {
+                return {age: 0, worth: 0}
+            }
+        );
+        var age_worth_sector_chart = dc.bubbleChart("#age_worth_sector_chart");
+        age_worth_sector_chart.width(700)
+            .height(300)
+            .margins({top: 10, right: 20, bottom: 20, left: 20})
+            .dimension(sectorDim)
+            .group(statsBySector)
+            .colors(d3.scale.category20())
+            .keyAccessor(function (p) {
+                return p.value.age;
+            })
+            .valueAccessor(function (p) {
+                return p.value.age;
+            })
+            .radiusValueAccessor(function (p) {
+                return p.value.age;
+            })
+            .x(d3.scale.linear().domain([0, 70000]))
+            .r(d3.scale.linear().domain([0, 70000]))
+            .minRadiusWithLabel(15)
+            .elasticY(true)
+            .yAxisPadding(100)
+            .elasticX(true)
+            .xAxisPadding(10000)
+            .maxBubbleRelativeSize(0.07)
+            .renderHorizontalGridLines(true)
+            .renderVerticalGridLines(true)
+            .renderLabel(true)
+            .renderTitle(true)
+            .title(function (p) {
+                return p.key
+                    + "\n"
+                    + "Age : " + numberFormat(p.value.age) + "\n"
+                    + "Worth: " + numberFormat(p.value.worth);
+            });
+        age_worth_sector_chart.yAxis().tickFormat(function (s) {
+            return s;
+        });
+        age_worth_sector_chart.xAxis().tickFormat(function (s) {
+            return s;
+        });
+
    dc.renderAll();
 }
