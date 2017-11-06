@@ -6,9 +6,9 @@ import os
 
 app = Flask(__name__)
 
-MONGODB_URI = os.environ.get('MONGODB_URI')
-DBS_NAME = os.environ.get('MONGO_DB_NAME','billionaires')
-COLLECTION_NAME = os.environ.get('MONGO_COLLECTION_NAME','stream2')
+MONGODB_URI = os.environ.get('MONGODB_URI', 'mongodb://heroku_8ljvxwbm:ra6nhgeqiup4tr7ns86f2pktg2@ds013486.mlab.com:13486/heroku_8ljvxwbm')
+DBS_NAME = os.environ.get('MONGO_DB_NAME','heroku_8ljvxwbm')
+COLLECTION_NAME = os.environ.get('MONGO_COLLECTION_NAME','projects')
 
 # Modify the following for your fields
 FIELDS = {'age': True, 'category': True, 'citizenship': True, 'company_name': True,
@@ -29,9 +29,9 @@ def get_data():
         collection = conn[DBS_NAME][COLLECTION_NAME]
         # Retrieve a result set only with the fields defined in FIELDS
         # and limit the the results to 55000
-        results = collection.find(projection=FIELDS)
+        projects = collection.find(projection=FIELDS)
         # Convert projects to a list in a JSON object and return the JSON data
-        return json.dumps(list(results))
+        return json.dumps(list(projects))
 
 
 if __name__ == "__main__":
