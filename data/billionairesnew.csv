@@ -1,4 +1,4 @@
-age,category,citizenship,company.name,company.type,country code,founded,from emerging,gdp,gender,industry,inherited,name,rank,region,relationship,sector,was founder,was political,wealth.type,worth,year
+age,category,citizenship,company_name,company_type,country_code,founded,from_emerging,gdp,gender,industry,inherited,name,rank,region,relationship,sector,was_founder,was_political,wealth_type,worth,year
 12,Financial,Germany,von Thurn and Taxis family,new,DEU,1615,TRUE,"2,500,000,000,000",male,Money Management,TRUE,Albert von Thurn und Taxis,258,Europe,relation,"postal service, beverages",TRUE,FALSE,inherited,1.5,1996
 21,Financial,United States,Ziff Davis Inc,new,USA,1928,TRUE,"8,100,000,000,000",male,Hedge funds,TRUE,Robert Ziff,418,North America,relation,publishing,TRUE,FALSE,inherited,1,1996
 24,Financial,United States,Ziff Davis Inc,new,USA,1927,TRUE,"8,100,000,000,000",male,Hedge funds,TRUE,Daniel Ziff,419,North America,relation,publishing,TRUE,FALSE,inherited,1,1996

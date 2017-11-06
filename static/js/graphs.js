@@ -1,20 +1,18 @@
 var numberFormat = d3.format(".2f");
 
 queue()
-    .defer(d3.csv, "data/billionairesnew.csv")
+    .defer(d3.json, "/data")
     .await(makeGraphs);
 
 function makeGraphs(error, billionairesData) {
         var ndx = crossfilter(billionairesData);
-       
+        
         billionairesData.forEach(function(d){
             d.age = parseInt(d.age);
             d.founded = parseInt(d.founded);
             d.worth = parseFloat(d.worth);
             d.rank = parseInt(d.rank);
         })
-        
-        
             
         var citizenship_dim = ndx.dimension(dc.pluck('citizenship'));
         var count_by_citizenship = citizenship_dim.group();
@@ -69,8 +67,8 @@ function makeGraphs(error, billionairesData) {
         console.log(statsByName.all());
         
         var age_worth_sector_chart = dc.bubbleChart("#age_worth_sector_chart");
-        age_worth_sector_chart.width(1500)
-            .height(600)
+        age_worth_sector_chart.width(600)
+            .height(300)
             .margins({top: 20, right: 20, bottom: 20, left: 20})
             .dimension(nameDim)
             .group(statsByName)
@@ -108,24 +106,6 @@ function makeGraphs(error, billionairesData) {
         age_worth_sector_chart.xAxis().tickFormat(function (s) {
             return s;
         });
-        
-        /*var ageDim = ndx.dimension(function(d){
-            return [d.worth, d.age];
-        });
-        var ageGroup = ageDim.group();
-        
-        var age_chart = dc.scatterPlot("#scatter_chart");
-        age_chart
-            .width(768)
-            .height(480)
-            .x(d3.scale.linear().domain([0, 80]))
-            .brushOn(false)
-            .symbolSize(8)
-            .clipPadding(10)
-            .yAxisLabel("This is the Y Axis!")
-            .dimension(ageDim)
-            .group(ageGroup);*/
-            
 
    dc.renderAll();
 }
