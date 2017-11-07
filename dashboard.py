@@ -22,7 +22,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/data")
+@app.route("../../data")
 def get_data():
     with MongoClient(MONGODB_URI) as conn:
         # Define which collection we wish to access

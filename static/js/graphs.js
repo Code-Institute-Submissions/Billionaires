@@ -64,8 +64,6 @@ function makeGraphs(error, billionairesData) {
             }
         );
         
-        console.log(statsByName.all());
-        
         var age_worth_sector_chart = dc.bubbleChart("#age_worth_sector_chart");
         age_worth_sector_chart.width(600)
             .height(300)
