@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 MONGODB_URI = os.environ.get('MONGODB_URI', 'mongodb://heroku_7mkztpqw:l4laif8c8nn2i758tdrmicmg83@ds129024.mlab.com:29024/heroku_7mkztpqw')
 DBS_NAME = os.environ.get('MONGO_DB_NAME','heroku_7mkztpqw')
-COLLECTION_NAME = os.environ.get('MONGO_COLLECTION_NAME','projects')
+COLLECTION_NAME = os.environ.get('MONGO_COLLECTION_NAME','project')
 
 # Modify the following for your fields
 FIELDS = {'age': True, 'category': True, 'citizenship': True, 'company_name': True,
