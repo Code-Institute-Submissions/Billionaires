@@ -6,8 +6,8 @@ import os
 
 app = Flask(__name__)
 
-MONGODB_URI = os.environ.get('MONGODB_URI', 'mongodb://heroku_8ljvxwbm:ra6nhgeqiup4tr7ns86f2pktg2@ds013486.mlab.com:13486/heroku_8ljvxwbm')
-DBS_NAME = os.environ.get('MONGO_DB_NAME','heroku_8ljvxwbm')
+MONGODB_URI = os.environ.get('MONGODB_URI', 'mongodb://heroku_7mkztpqw:l4laif8c8nn2i758tdrmicmg83@ds129024.mlab.com:29024/heroku_7mkztpqw')
+DBS_NAME = os.environ.get('MONGO_DB_NAME','heroku_7mkztpqw')
 COLLECTION_NAME = os.environ.get('MONGO_COLLECTION_NAME','projects')
 
 # Modify the following for your fields
@@ -22,7 +22,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route("../../data")
+@app.route("/data")
 def get_data():
     with MongoClient(MONGODB_URI) as conn:
         # Define which collection we wish to access
