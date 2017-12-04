@@ -72,11 +72,11 @@ function makeGraphs(error, billionairesData) {
             .margins({top: 20, right: 20, bottom: 20, left: 20})
             .dimension(gender_dim)
             .group(count_by_gender)
-            .transitionDuration(500)
+            .transitionDuration(1000)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
-            .xAxisLabel("Gender")
-            .yAxis().ticks(10);
+            .othersGrouper(false)
+            .yAxis().ticks(8);
         
         // var age_worth_sector_chart = dc.bubbleChart("#age_worth_sector_chart");
         // age_worth_sector_chart.width(600)
