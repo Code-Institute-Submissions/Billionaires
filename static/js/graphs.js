@@ -114,9 +114,9 @@ function makeGraphs(error, billionairesData) {
             .dimension(gender_dim)
             .group(count_by_gender)
             .transitionDuration(1000)
-            .x(d3.scale.ordinal())
+            .x(d3.scale.max())
             .xUnits(dc.units.ordinal)
-            .yAxis().ticks(8);
+            .yAxis().ticks(3);
 
    dc.renderAll();
 }
