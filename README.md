@@ -1,72 +1,75 @@
-# Thank you for purchasing an Official Bootstrap Theme <3 #
+# Billionaires
+**Interactive Data visualisation Web Application**
 
-Within your Bootstrap Theme you’ll find the following directories and files, grouping common resources and providing both compiled and minified distribution files, as well as raw source files.
-
-(*NOTE: Themes now ship with support for 2 major Bootstrap versions; organized by top level directories, `v3` and `v4`.*)
-
-```
-theme/
-  ├── v3/*
-  └── v4
-      ├── gulpfile.js
-      ├── package.json
-      ├── README.md
-      ├── docs/
-      ├── less/
-      │   ├── bootstrap/
-      │   ├── custom/
-      │   ├── variables.less
-      │   └── toolkit.less
-      ├── js/
-      │   ├── bootstrap/
-      │   └── custom/
-      ├── fonts/
-      │   ├── bootstrap-entypo.eot
-      │   ├── bootstrap-entypo.svg
-      │   ├── bootstrap-entypo.ttf
-      │   ├── bootstrap-entypo.woff
-      │   └── bootstrap-entypo.woff2
-      └── dist/
-          ├── toolkit.css
-          ├── toolkit.css.map
-          ├── toolkit.min.css
-          ├── toolkit.min.css.map
-          ├── toolkit.js
-          └── toolkit.min.js
-```
-
-#### Docs and Examples
-
-The `docs` directory contains all the static resources for your Themes docs and examples. To view, just open in your favorite browser!
-
-```
-$ open docs/index.html
-```
+This Web App was built as the second project for the Code Institute's classroom bootcamp. 
+It is a Data Visualisation project using Pythons Flask framework and Javascript libraries
+such as D3.js & DC.js.
 
 
-#### Gulpfile.js
+## Live Demo
 
-We've also included an optional Gulp file to help you get started with theme customization. You’ll need to install Node.js and Gulp before using our included gulpfile.js.
-
-To install Node visit [https://nodejs.org/download](https://nodejs.org/download/).
-
-To install gulp, run the following command:
-
-```
-$ npm install gulp -g
-```
-
-When you’re done, install the rest of the theme's dependencies:
-
-```
-$ npm install
-```
-
-From here on out, simply run `gulp` from your terminal and you're good to go!
-
-+ `gulp` - recompiles and minifies your theme assets into your `dist` directory.
+**Follow this link to view deployed version of the web app https://arcane-fjord-14490.herokuapp.com/**
 
 
-#### Support
+## Components
 
-If you experience any problems with the above, or if you think you've found a bug with your theme - please don't hesitate to reach out to themes@getbootstrap.com. thanks!!
+#### D3.js
+A JavaScript based visualisation engine that renders interactive charts 
+and graphs in svg format when given data, which are then passed in to divs in index.html
+
+#### DC.js
+A Javascript based wrapper library for D3.js - this made plotting the charts easier
+
+#### Crossfilter.js
+A Javascript based data manipulation library that enables two way data binding - 
+you will see this in action when a section of a graph is clicked, all the other graphs filter
+
+#### Queue.js
+An asynchronour helper library for JavaScript
+
+#### Flask
+A Python micro-framework that was used to serve the data and render the HTML pages for this Application
+
+#### Python
+A Python file name dashboard.py renders a graphs.html template and builds a web server to interact with MongoDB
+
+#### MongoDB
+NoSQL database that converts and presents data in JSON format. 
+
+#### Dataset
+The dataset used can be obtained [here](https://think.cs.vt.edu/corgis/csv/billionaires/billionaires.html)
+
+
+## Deployment / Hosting
+
+This Application was deployed and is hosted on Heroku - gunicorn Python package runs the http server for the app, 
+the Procfile gives Heroku the information to run the app and requirements.txt is a file that conains all the Python 
+packages (pip installs) required to run the app. mLab MongoDB was chosen to host the dataset on the server.
+
+
+## Installation
+
+Follow the below instructions to get this project up & running on Mac (commands will be slightly different for Windows)
+
+1. Download MongoDB & Robo3T
+2. Go to folder you want to put the cloned project in your terminal & type:
+    `$ git clone https://github.com/conorc470/Billionaires`
+3. Create & Activate a new Virtual Environment in terminal:
+    Create: `$ python3 -m venv ~/virtualenvs/name_of_environment`
+    Activate: `$ source ~/virtualenvs/name_of_environment/bin/activate`
+4. Install the project dependancies:
+    `$ pip install -r requirements.txt`
+5. Get Mongod running
+    `$ mongod --config config/mongoConfig.conf`
+6. Open the folder in vscode and use the internal Terminal 
+7. Navigate to the 'dashboard.py', right click and select 'Run python file in terminal'
+8. You should see it running below - go to your browser and type '127.0.0.1:5000' into the address bar and the application should appear
+
+
+## Testing
+This Application was tested across a range of browsers
+
+
+
+
+

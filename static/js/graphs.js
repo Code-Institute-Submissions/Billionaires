@@ -64,6 +64,7 @@ function makeGraphs(error, billionairesData) {
             }
         );
         
+        
         var age_worth_sector_chart = dc.bubbleChart("#age_worth_sector_chart");
         age_worth_sector_chart.width(600)
             .height(300)
@@ -107,14 +108,3 @@ function makeGraphs(error, billionairesData) {
 
    dc.renderAll();
 }
-
-var svg = dimple.newSvg(".dimple", 800, 600);
-    var data = [
-      { "Word":"Hello", "Awesomeness":2000 },
-      { "Word":"World", "Awesomeness":3000 }
-    ];
-    var chart = new dimple.chart(svg, data);
-    chart.addCategoryAxis("x", "Word");
-    chart.addMeasureAxis("y", "Awesomeness");
-    chart.addSeries(null, dimple.plot.bar);
-    chart.draw()
