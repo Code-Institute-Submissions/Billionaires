@@ -45,38 +45,24 @@ function makeGraphs(error, billionairesData) {
             .othersGrouper(false)
             .xAxis().ticks(5);
             
-        var nameDim = ndx.dimension(function(d){
-            return d.name;
-        });
-        var statsByName = nameDim.group().reduce(
-            function (p, v) {
-                p.age = +v["age"];
-                p.worth = +v["worth"];
-                return p;
-            },
-            function (p, v) {
-                p.age -= +v["age"];
-                p.worth -= +v["worth"];
-                return p;
-            },
-            function () {
-                return {worth: 0, age: 0, rank: 0, sector: 0}
-            }
-        );
-        
-        var gender_dim = ndx.dimension(dc.pluck('gender'));
-        var count_by_gender = gender_dim.group();
-        dc.barChart("#gender_chart")
-            .height(300)
-            .width(600)
-            .margins({top: 20, right: 20, bottom: 20, left: 20})
-            .dimension(gender_dim)
-            .group(count_by_gender)
-            .transitionDuration(1000)
-            .x(d3.scale.ordinal())
-            .xUnits(dc.units.ordinal)
-            .othersGrouper(false)
-            .yAxis().ticks(8);
+        // var nameDim = ndx.dimension(function(d){
+        //     return d.name;
+        // });
+        // var statsByName = nameDim.group().reduce(
+        //     function (p, v) {
+        //         p.age = +v["age"];
+        //         p.worth = +v["worth"];
+        //         return p;
+        //     },
+        //     function (p, v) {
+        //         p.age -= +v["age"];
+        //         p.worth -= +v["worth"];
+        //         return p;
+        //     },
+        //     function () {
+        //         return {worth: 0, age: 0, rank: 0, sector: 0}
+        //     }
+        // );
         
         // var age_worth_sector_chart = dc.bubbleChart("#age_worth_sector_chart");
         // age_worth_sector_chart.width(600)
@@ -118,6 +104,20 @@ function makeGraphs(error, billionairesData) {
         // age_worth_sector_chart.xAxis().tickFormat(function (s) {
         //     return s;
         // });
+        
+        var gender_dim = ndx.dimension(dc.pluck('gender'));
+        var count_by_gender = gender_dim.group();
+        dc.barChart("#gender_chart")
+            .height(300)
+            .width(600)
+            .margins({top: 20, right: 20, bottom: 20, left: 20})
+            .dimension(gender_dim)
+            .group(count_by_gender)
+            .transitionDuration(1000)
+            .x(d3.scale.ordinal())
+            .xUnits(dc.units.ordinal)
+            .othersGrouper(false)
+            .yAxis().ticks(8);
 
    dc.renderAll();
 }
