@@ -1,5 +1,3 @@
-var numberFormat = d3.format(".2f");
-
 queue()
     .defer(d3.json, "/data")
     .await(makeGraphs);
