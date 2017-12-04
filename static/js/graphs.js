@@ -64,47 +64,61 @@ function makeGraphs(error, billionairesData) {
             }
         );
         
+        var gender_dim = ndx.dimension(dc.pluck('gender'));
+        var count_by_gender = gender_dim.group();
         
-        var age_worth_sector_chart = dc.bubbleChart("#age_worth_sector_chart");
-        age_worth_sector_chart.width(600)
+        dc.barChart("#chart1")
             .height(300)
+            .width(500)
             .margins({top: 20, right: 20, bottom: 20, left: 20})
-            .dimension(nameDim)
-            .group(statsByName)
-            .colors(d3.scale.category20())
-            .keyAccessor(function (p) {
-                return p.value.worth;
-            })
-            .valueAccessor(function (p) {
-                return p.value.age;
-            })
-            .radiusValueAccessor(function (p) {
-                return p.value.worth*50;
-            })
-            .x(d3.scale.linear().domain([0, 120]))
-            .r(d3.scale.linear().domain([0, 100]))
-            .minRadiusWithLabel(100)
-            .elasticY(true)
-            .elasticX(true)
-            .xAxisPadding(1)
-            .yAxisPadding(5)
-            .maxBubbleRelativeSize(0.009)
-            .renderHorizontalGridLines(true)
-            .renderVerticalGridLines(true)
-            .renderLabel(true)
-            .renderTitle(true)
-            .title(function (p) {
-                return p.key
-                    + "\n"
-                    + "Age : " + numberFormat(p.value.age) + "\n"
-                    + "Worth: " + numberFormat(p.value.worth);
-            });
-        age_worth_sector_chart.yAxis().tickFormat(function (s) {
-            return s;
-        });
-        age_worth_sector_chart.xAxis().tickFormat(function (s) {
-            return s;
-        });
+            .dimension(gender_dim)
+            .group(count_by_gender)
+            .transitionDuration(500)
+            .x(d3.scale.ordinal())
+            .xUnits(dc.units.ordinal)
+            .xAxisLabel("Gender")
+            .yAxis().ticks(10);
+        
+        // var age_worth_sector_chart = dc.bubbleChart("#age_worth_sector_chart");
+        // age_worth_sector_chart.width(600)
+        //     .height(300)
+        //     .margins({top: 20, right: 20, bottom: 20, left: 20})
+        //     .dimension(nameDim)
+        //     .group(statsByName)
+        //     .colors(d3.scale.category20())
+        //     .keyAccessor(function (p) {
+        //         return p.value.worth;
+        //     })
+        //     .valueAccessor(function (p) {
+        //         return p.value.age;
+        //     })
+        //     .radiusValueAccessor(function (p) {
+        //         return p.value.worth*50;
+        //     })
+        //     .x(d3.scale.linear().domain([0, 120]))
+        //     .r(d3.scale.linear().domain([0, 100]))
+        //     .minRadiusWithLabel(100)
+        //     .elasticY(true)
+        //     .elasticX(true)
+        //     .xAxisPadding(1)
+        //     .yAxisPadding(5)
+        //     .maxBubbleRelativeSize(0.009)
+        //     .renderHorizontalGridLines(true)
+        //     .renderVerticalGridLines(true)
+        //     .renderLabel(true)
+        //     .renderTitle(true)
+        //     .title(function (p) {
+        //         return p.key
+        //             + "\n"
+        //             + "Age : " + numberFormat(p.value.age) + "\n"
+        //             + "Worth: " + numberFormat(p.value.worth);
+        //     });
+        // age_worth_sector_chart.yAxis().tickFormat(function (s) {
+        //     return s;
+        // });
+        // age_worth_sector_chart.xAxis().tickFormat(function (s) {
+        //     return s;
+        // });
 
    dc.renderAll();
 }
