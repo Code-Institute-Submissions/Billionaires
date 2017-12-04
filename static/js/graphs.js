@@ -116,7 +116,6 @@ function makeGraphs(error, billionairesData) {
             .transitionDuration(1000)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
-            .othersGrouper(false)
             .yAxis().ticks(8);
 
    dc.renderAll();
