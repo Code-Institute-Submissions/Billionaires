@@ -44,7 +44,8 @@ function makeGraphs(error, billionairesData) {
             .cap(10)
             .othersGrouper(false)
             .xAxis().ticks(5);
-            
+         
+        //------------Bubble Chart------------------   
         // var nameDim = ndx.dimension(function(d){
         //     return d.name;
         // });
@@ -114,8 +115,8 @@ function makeGraphs(error, billionairesData) {
             .dimension(gender_dim)
             .group(count_by_gender)
             .transitionDuration(1000)
-            .x(d3.scale.linear())
-            .xUnits(dc.units.linear)
+            .x(d3.scale.ordinal())
+            .xUnits(dc.units.ordinal)
             .yAxis().ticks();
 
    dc.renderAll();
