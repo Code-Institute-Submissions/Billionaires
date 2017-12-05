@@ -107,7 +107,7 @@ function makeGraphs(error, billionairesData) {
         // });
         
         var gender_dim = ndx.dimension(dc.pluck('gender'));
-        var count_by_gender = gender_dim.group().reduceSum(dc.pluck('gender'));
+        var count_by_gender = gender_dim.group();
         dc.barChart("#gender_chart")
             .height(300)
             .width(600)
