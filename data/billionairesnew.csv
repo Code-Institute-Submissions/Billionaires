@@ -2228,4 +2228,3 @@ age,category,citizenship,company_name,company_type,country_code,founded,from_eme
 96,Non-Traded Sectors,Austria,BILLA,new,AUT,1953,TRUE,0,male,"Retail, Restaurant",TRUE,Karl Wlaschek,305,Europe,founder,groceries,TRUE,FALSE,founder non-finance,4.8,2014
 96,Financial,United States,MGM Grand,aquired,USA,1924,TRUE,0,male,Real Estate,TRUE,Kirk Kerkorian,328,North America,investor,real estate,TRUE,FALSE,self-made finance,4.5,2014
 98,Resource Related,United States,Standard Oil,new,USA,1870,TRUE,0,male,Energy,TRUE,"David Rockefeller, Sr.",580,North America,relation,oil,TRUE,FALSE,inherited,2.9,2014
-age,category,citizenship,company.name,company.type,country code,founded,from emerging,gdp,gender,industry,inherited,name,rank,region,relationship,sector,was founder,was political,wealth.type,worth in billions,year
