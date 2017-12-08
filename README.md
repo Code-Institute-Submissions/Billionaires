@@ -8,7 +8,7 @@ such as D3.js & DC.js.
 
 ## Live Demo
 
-**Follow this link to view deployed version of the web app https://arcane-fjord-14490.herokuapp.com/**
+**Follow this link to view deployed version of the web app https://conor-dev-dashboard.herokuapp.com/**
 
 
 ## Components
